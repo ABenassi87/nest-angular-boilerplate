@@ -1,0 +1,29 @@
+{
+  "name": "nest-angular",
+  "version": "1.0.0",
+  "description": "NestJS 5 - Angular 6 boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "build:client": "cd client && ng build --prod --output-path=../dist/client",
+    "build:server": "cd server && npm run webpack",
+    "build": "concurrently \" npm run build:server \" \" npm run build:client \" ",
+    "start:client": " cd client && npm start",
+    "start:server": " cd server && npm start",
+    "start": "concurrently \" npm run start:server \" \" npm run start:client \" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alfredo Benassi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.9.0",
+    "@types/webpack": "^4.4.11",
+    "concurrently": "^4.0.1",
+    "prettier": "^1.14.2",
+    "ts-loader": "^4.5.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^2.9.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
